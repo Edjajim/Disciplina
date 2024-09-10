@@ -1,10 +1,3 @@
-<div *ngIf="products===null">
-  <h3>La lista no cuenta con productos</h3>
-</div>
-<div *ngIf="products!==null">
-  <div *ngFor="let prod of products">
-    <app-products [product]="prod"/>
-  </div>
-</div>
+<app-products/>
 
 <router-outlet />

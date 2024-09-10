@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-products',
@@ -8,5 +8,21 @@ import { Component, input } from '@angular/core';
   templateUrl: './products.component.html',
 })
 export class ProductsComponent {
-  product = input.required<{}>()
+  products = [
+    {
+      name: 'coca',
+      desc: 'bebida carbonatada',
+      price: '20'
+    },
+    {
+      name: 'doritos',
+      desc: 'frituras de queso',
+      price: '16'
+    },
+    {
+      name: 'emperador',
+      desc: 'galletas de sabor combinado',
+      price: '18'
+    },
+  ]
 }

@@ -1,3 +1,10 @@
-<p>Nombre del producto: {{product?.name}}</p>
-<p>Descripción: {{product?.desc}}</p>
-<p>Precio: ${{product?.price}}</p>
+<div *ngIf="products===null">
+  <h3>La lista no cuenta con productos</h3>
+</div>
+<div *ngIf="products!==null">
+  <div *ngFor="let prod of products">
+      <p>Nombre del producto: {{prod?.name}}</p>
+      <p>Descripción: {{prod?.desc}}</p>
+      <p>Precio: ${{prod?.price}}</p>
+  </div>
+</div>
