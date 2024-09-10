@@ -1,0 +1,8 @@
+<div *ngIf="products===null">
+  <h3>La lista no cuenta con productos</h3>
+</div>
+<div *ngIf="products!==null">
+  <app-products/>
+</div>
+
+<router-outlet />
